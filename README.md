@@ -38,15 +38,6 @@ The following variables may be set to control the PHP environment:
 - `PHP_PM_MAX_SPARE_SERVERS`: (default: `6`) Set the maximum number of spare servers
 - `APP_MAGE_MODE`: (default: `default`) Set the MAGE_MODE
 
-# One-off containers
-
-This image can run one-off PHP commands, such as:
-
-`docker run --rm --name php-test mageinferno/magento2-php echo "Hello world"`
-
-Application code is placed in `/srv/www`. You can also attach a volume to that location, then run Magento-specific commands such as the Magento CLI tool:
-
-`docker run --rm --name mysite -v /Users/username/Sites/mysite/app/code:/srv/www/app/code mageinferno/magento2-php:5.6.20-fpm-0 ./bin/magento`
 
 # Docker Compose
 

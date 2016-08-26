@@ -99,8 +99,8 @@ ENV APP_MAGE_MODE default
 COPY conf/www.conf /usr/local/etc/php-fpm.d/
 COPY conf/php.ini /usr/local/etc/php/
 COPY conf/php-fpm.conf /usr/local/etc/
-COPY bin/* /usr/local/bin/
+COPY docker/* /usr/local/docker/
 
 WORKDIR /srv/www
 
-CMD ["/usr/local/bin/start"]
+CMD ["/usr/local/docker/start"]
