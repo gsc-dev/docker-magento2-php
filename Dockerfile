@@ -103,4 +103,7 @@ COPY docker/* /usr/local/docker/
 
 WORKDIR /srv/www
 
-CMD ["/usr/local/docker/start"]
+RUN chown -R root:root /usr/local/docker/ && chmod u+x /usr/local/docker/entrypoint
+
+# Start the Service
+CMD ["/usr/local/docker/entrypoint"]
